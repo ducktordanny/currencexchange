@@ -1,1 +1,111 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+// color selected by: the color of the money and trust
+$primary-color: rgb(0, 128, 32);
+$secondary-color: rgb(120, 175, 115);
+$third-color: rgb(210, 225, 225);
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100vh;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: $third-color;
+	color: #444;
+
+	::selection {
+		color: #fff;
+		background: $primary-color;
+	}
+}
+
+form {
+	margin: 2rem;
+	padding: 4rem 2rem;
+	border: 1px solid $primary-color;
+	border-radius: 10px;
+
+	label {
+		margin: 0 1rem;
+		font-size: 1.25rem;
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 768px) {
+		margin: 1rem;
+		padding: 2rem 1rem;
+
+		label {
+			font-size: 1rem;
+		}
+	}
+}
+
+.main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.textfield {
+	padding: 5px;
+	margin: 5px 0;
+	border-radius: 5px;
+	border: none;
+
+	&:focus {
+		outline-color: $primary-color;
+	}
+}
+
+.select {
+	padding: 5px;
+	margin: 5px 0;
+	border-radius: 5px;
+	border: none;
+
+	&:focus {
+		outline-color: $primary-color;
+	}
+}
+
+.error {
+	color: rgb(128, 0, 0);
+	text-align: center;
+}
+
+.button {
+	padding: 5px 10px;
+	margin: 5px;
+	background: #fff;
+	border-radius: 5px;
+	border: none;
+	font-size: 1.25rem;
+	color: #fff;
+	background: $primary-color;
+	transition: all 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		background: $secondary-color;
+	}
+
+	&:active {
+		background: #fff;
+		color: #444;
+	}
+
+	@media only screen and (max-width: 768px) {
+		font-size: 1rem;
+	}
+}

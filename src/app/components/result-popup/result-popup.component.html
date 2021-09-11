@@ -1,0 +1,24 @@
+<div
+	*ngIf="show && result !== undefined"
+	@fadeIn
+	class="backdrop"
+	(click)="hidePopup($event)"
+>
+	<div class="popup">
+		<h1>Exchange result:</h1>
+		<h2>{{ result.exchange | currency: result.to.key }}</h2>
+		<h3>Rates:</h3>
+		<p>
+			{{ result.from.key }}: {{ result.from.rate }}, {{ result.to.key }}:
+			{{ result.to.rate }}
+		</p>
+		<h3>Date:</h3>
+		<p>{{ result.date }}</p>
+		<input
+			class="button"
+			type="button"
+			value="Close"
+			(click)="hidePopup($event)"
+		/>
+	</div>
+</div>

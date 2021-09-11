@@ -1,27 +1,57 @@
-# Currenchange
+# Currencexchange
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
+> A simple single page application to exchange currencies between different valuts.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Requirements
 
-## Code scaffolding
+-   git
+-   yarn
+-   @angular/cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Clone repository
 
-## Build
+```sh
+git clone git@github.com:ducktordanny/currencexchange.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Setup
 
-## Running unit tests
+```sh
+yarn
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Get your API key:
 
-## Running end-to-end tests
+Go to the following [link](https://manage.exchangeratesapi.io/signup/free) and sign up with your information to get your free API Key.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### If you have bash installed:
 
-## Further help
+```sh
+yarn setup
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Setup manually:
+
+Create the file named `config.ts` from the root folder:
+
+```sh
+touch src/app/config.ts
+```
+
+Insert the following code and replace SECRET with your own API key:
+
+```ts
+export const apiKey = 'SECRET';
+```
+
+### Start server
+
+```sh
+ng serve
+```
+
+## Usage
+
+After setting up everything and starting the server you can go to http://localhost:4200. You can choose your currencies and insert the amount what you want to be exchanged and if there was no error then a result box will show up. It'll include the exchanged amount, the rates and the date.

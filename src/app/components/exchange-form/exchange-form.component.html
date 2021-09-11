@@ -1,0 +1,44 @@
+<form @fadeIn (submit)="getExchange()">
+	<app-result-popup
+		[result]="result"
+		[show]="showResult"
+		(onHide)="hideResult()"
+	></app-result-popup>
+	<section>
+		<label for="amount">Amount to exchange</label>
+		<input
+			type="number"
+			id="amount"
+			class="textfield"
+			name="amount"
+			placeholder="Amount"
+			[(ngModel)]="amount"
+		/>
+	</section>
+	<section>
+		<app-currency-options
+			label="From"
+			id="from"
+			(onChange)="fromChange($event)"
+			[currencyOptions]="currencyOptions"
+			selected="{{ from }}"
+		></app-currency-options>
+		<app-currency-options
+			label="To"
+			id="to"
+			(onChange)="toChange($event)"
+			[currencyOptions]="currencyOptions"
+			selected="{{ to }}"
+		></app-currency-options>
+	</section>
+	<app-error [errorMessage]="errorMessage"></app-error>
+	<section>
+		<input
+			type="button"
+			class="button"
+			value="Switch"
+			(click)="switchBetweenCurrencies()"
+		/>
+		<input type="submit" class="button" value="Calculate" />
+	</section>
+</form>
