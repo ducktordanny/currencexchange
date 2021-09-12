@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ResultPopupComponent } from './components/result-popup/result-popup.component';
 import { ErrorComponent } from './components/error/error.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 @NgModule({
 	declarations: [
@@ -21,6 +22,7 @@ import { ErrorComponent } from './components/error/error.component';
 		HeaderComponent,
 		ResultPopupComponent,
 		ErrorComponent,
+		LogoComponent,
 	],
 	imports: [
 		BrowserModule,
