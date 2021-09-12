@@ -1,13 +1,23 @@
 $primary-color: rgb(0, 128, 32);
+$secondary-color: rgb(120, 175, 115);
+$third-color: rgb(210, 225, 225);
 
 header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: linear-gradient(45deg, $primary-color, $third-color);
+
 	h1 {
-		color: $primary-color;
+		padding: 2rem;
+		color: #fff;
 		font-weight: 700;
 	}
 
 	@media only screen and (max-width: 768px) {
 		h1 {
+			padding: 1rem;
 			font-size: 1.5rem;
 		}
 	}
