@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# echo -e "export const apiKey = 'SECRET';" > src/app/config.ts
-
 config=src/app/config.ts
 
 generate() {
@@ -18,8 +16,8 @@ if [ -f "$config" ]; then
 		generate
 	fi
 else 
-	echo "Would you like to generate the config file? (y/n) "
-	if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
-		generate
-	fi
+	echo "Config file not found. Generate one."
+	generate
 fi
+
+echo "Check the $config file if everything right."
