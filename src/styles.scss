@@ -45,7 +45,7 @@ form {
 	}
 
 	@media only screen and (max-width: 768px) {
-		margin: 1rem;
+		margin: 1rem auto;
 		padding: 2rem 1rem;
 
 		label {
@@ -55,7 +55,11 @@ form {
 }
 
 main {
-	padding: 6rem 0;
+	padding: 4rem 2rem;
+
+	@media only screen and (max-width: 768px) {
+		padding: 4rem 1rem;
+	}
 }
 
 .wrapper {

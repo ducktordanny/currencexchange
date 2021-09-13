@@ -37,7 +37,8 @@ const appRoutes: Routes = [
 		BrowserAnimationsModule,
 		HttpClientModule,
 		FormsModule,
-		RouterModule.forRoot(appRoutes, { enableTracing: true }),
+		// in developement enable tracing might be helpful
+		RouterModule.forRoot(appRoutes, { enableTracing: false }),
 	],
 	providers: [],
 	bootstrap: [AppComponent],
