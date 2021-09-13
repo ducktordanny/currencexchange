@@ -18,6 +18,8 @@ git clone git@github.com:ducktordanny/currencexchange.git
 
 ### Setup
 
+Install dependencies
+
 ```sh
 yarn
 ```
@@ -34,7 +36,7 @@ yarn setup
 
 #### Setup manually:
 
-Create the file named `config.ts` from the root folder:
+Create the file named `config.ts` into the `src/app` folder:
 
 ```sh
 touch src/app/config.ts
