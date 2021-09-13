@@ -4,4 +4,4 @@
 -   [x] Make a simple logo.
 -   [x] Fix footer.
 -   [x] Add about route.
--   [ ] Finish setup script.
+-   [x] Finish setup script.
